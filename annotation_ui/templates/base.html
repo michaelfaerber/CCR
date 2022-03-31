@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<style>
+header {
+  width: 70%;
+  height: 150px;
+  position: fixed;
+  top: 0;
+  left: 15%;
+  border-bottom: 1px solid #333;
+  background-color: #fff;
+  overflow: scroll;
+}
+article {
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 150px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+td {
+  padding: 3px;
+}
+label {
+  display: block;
+  margin-bottom: 2px;
+}
+label:hover {
+  background-color: #ddd;
+}
+li > p:first-child {
+  margin-bottom: 0;
+}
+li > a > p {
+  margin-top: 0;
+  text-align: center;
+}
+li > a > p:hover {
+  background-color: #ddd;
+}
+li > a > p {
+  margin-top: 0;
+}
+</style>
+</head>
+<body>
+<header>
+<table>
+<tr>
+<td><b>Annotating as</b></td>
+<td>{% if annotator_id is defined %}
+    {{ annotator_id }}
+{% else %}
+    -
+{% endif %}&emsp;</td>
+<td><b>Annotated</b></td>
+<td>{% if annotated_num is defined %}
+    {{ annotated_num }}
+{% else %}
+    -
+{% endif %}</td>
+</tr>
+</table>
+<table>
+<tr>
+<td style="width: 150px;"><b>Citing sentence</b></td>
+<td>{% if citing_context is defined %}
+    {{ citing_context["citing_context"] }}
+    &emsp;(<a href="https://arxiv.org/abs/{{ citing_context["citing_arxiv_id"] }}">☲</a>
+    ➡
+    <a href="https://arxiv.org/abs/{{ citing_context["cited_arxiv_id"] }}">☰</a>)
+{% else %}
+    -
+{% endif %}</td>
+</tr>
+</table>
+</header>
+<section>
+{% block content %}{% endblock %}
+</section>
+</body>
+</html>

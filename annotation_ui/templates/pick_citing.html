@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<article>
+Page: {{ page }}<br>
+<h1>Citing sentences</h1>
+<ul>
+{% for cit_cntxt in page_contexts %}
+  <li><p>{{ cit_cntxt["citing_context"] }}
+  &emsp;(<a href="https://arxiv.org/abs/{{ cit_cntxt["citing_arxiv_id"] }}">☲</a>
+  ➡
+  <a href="https://arxiv.org/abs/{{ cit_cntxt["cited_arxiv_id"] }}">☰</a>)
+  </p>
+  <a href="/cited?annotator_id={{ annotator_id }}&page={{ page }}&list_idx={{ cit_cntxt["list_idx"] }}"><p>use
+  {% if existing_annots_dict[cit_cntxt["list_idx"]]|length > 0 %}
+    &emsp;annotated by: {{ existing_annots_dict[cit_cntxt["list_idx"]] }}
+  {% endif %}
+  </p></a></li>
+{% endfor %}
+</ul>
+<br>
+<p style="text-align: center;">
+<a href="/citing?annotator_id={{ annotator_id }}&page={{ page-1 }}">&lt;&lt;&lt; previous</a>
+&emsp;|&emsp;
+<a href="/citing?annotator_id={{ annotator_id }}&page={{ page+1 }}"> next&gt;&gt;&gt;</a>
+</p>
+</article>
+{% endblock %}

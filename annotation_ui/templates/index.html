@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<article>
+<h3>Enter annotator ID</h3>
+<form action="/citing" method="POST">
+<input type="text" id="annotator_id" name="annotator_id">&emsp;(tsa, mfa, syu, ...)<br>
+<input type="hidden" id="page" name="page" value="0">
+<input type="submit" value="submit">
+</form>
+</article>
+{% endblock %}

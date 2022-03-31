@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<article>
+<form action="/citing" method="POST">
+<input type="hidden" id="annotator_id" name="annotator_id" value="{{ annotator_id }}">
+<input type="hidden" id="page" name="page" value="{{ return_page }}">
+<input type="hidden" id="citing_sentence" name="citing_sentence" value="{{ citing_sentence }}">
+{% for sentence in full_text_sentences %}
+  <label>
+  {% if loop.index0 in annotated_sentence_idxs %}
+    <input type="checkbox" checked="checked" name="cited_sentences" value="{{ loop.index0 }}">
+  {% else %}
+    <input type="checkbox" name="cited_sentences" value="{{ loop.index0 }}">
+  {% endif %}
+  {{ sentence }}
+  </label>
+{% endfor %}
+<p style="text-align: center;">
+<input type="submit" value="submit" style="width: 100%; padding: 5px;">
+</p>
+</form>
+</article>
+{% endblock %}
