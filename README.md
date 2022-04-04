@@ -9,7 +9,7 @@ Citation recommendation refers to the task of recommending appropriate citations
 We implemented basic experiments based on 20 annotated citation context. 
 
 Approach: 
-1. Extracting the representation of citation context and all the cited sentences from a pre-trained language model, e.g.: BERT, DistilBERT. 
+1. Extracting the representation of citation context and all the cited sentences from a pre-trained language model, e.g.: BERT, DistilBERT, RoBERTa. 
 2. Calculating the cosine similatiry between citation context and cited sentences.
 3. Based on manual inspection, defining a threshold for the
     cosine similarity, above which a sentence will be predicted as
