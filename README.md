@@ -12,7 +12,7 @@ Approach:
 1. Extracting the representation of citation context and all the cited sentences from a pre-trained language model, e.g.: BERT, DistilBERT, RoBERTa. 
 2. Calculating the cosine similatiry between citation context and cited sentences.
 3. Based on manual inspection, defining a threshold for the
-    cosine similarity, above which a sentence will be predicted as
+    cosine similarity (we defined 0.90), above which a sentence will be predicted as
     positive.
    
 4. Calculating Prec/Rec/F1 based on the binary predicted labels and
