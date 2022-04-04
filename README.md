@@ -18,7 +18,7 @@ Approach:
 4. Calculating Prec/Rec/F1 based on the binary predicted labels and
     our ground truth.
    
-The code can be found [here](/experiments/calculate_cosine_similarity.ipynb)
+The code can be found [here](/experiments/calculate_cosine_similarity.ipynb).
 
 ### Data
 Data used in the experiments:
@@ -39,7 +39,7 @@ Cosine similarity between citation context and cited sentences by:
 ### Results
 The preliminary results of the experiments:
 
-.csv: The cosine similarity of citation context and each cited sentences
+.csv: The cosine similarity of citation context and each cited sentences (ranked by cosine similarity).
 
 .png: The Prec/Rec/F1 based on the binary predicted labels and
     our ground truth.
