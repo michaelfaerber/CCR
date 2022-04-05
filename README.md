@@ -4,13 +4,28 @@ Citation recommendation refers to the task of recommending appropriate citations
 
 <img align="middle" src="data_example.png" alt="data example" width="400"/>
 
+
+## Annotation
+
+For efficient data annotation we implemented a web based annotation UI.
+
+![](ui_explanation.png)
+
+The UI has the following features.
+
+1. Annotators see how much they already annotated.
+2. A list of citing sentences is displayed from which the annotator chooses those that contain a claim.
+3. For each citing sentence it is displayed who already annotated it.
+4. After selecting a citing sentence, the sentence itself is constantly displayed on top for reference.
+5. Displayed below are the sentences of the cited paper, from which the annotator chooses those that back the claim.
+
 ## Experiments
 
 We implemented basic experiments based on 20 annotated citation context. 
 
 Approach: 
 1. Extracting the representation of citation context and all the cited sentences from a pre-trained language model, e.g.: BERT, DistilBERT, RoBERTa. 
-2. Calculating the cosine similatiry between citation context and cited sentences.
+2. Calculating the cosine similarity between citation context and cited sentences.
 3. Based on manual inspection, defining a threshold for the
     cosine similarity (we defined 0.90), above which a sentence will be predicted as
     positive.
