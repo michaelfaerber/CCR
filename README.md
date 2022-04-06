@@ -49,7 +49,7 @@ Cosine similarity between citation context and cited sentences by:
 
 + [RoBERTa](/experiments/data/context_and_score_roberta.json)
 
-+ [BERT: pretrained with 20 cited papers](/experiments/data/context_and_score_bert_pre-trained.json) (pretrained using the`run_mlm.py`script provided by [huggingface](https://github.com/huggingface/transformers/blob/main/examples/pytorch/language-modeling/run_mlm.py))
++ [BERT: pretrained with 20 cited papers](/experiments/data/context_and_score_bert_pre-trained.json) (pretrained using the `run_mlm.py` script provided by [huggingface](https://github.com/huggingface/transformers/blob/main/examples/pytorch/language-modeling/run_mlm.py))
 
 ### Results
 The preliminary results of the experiments:
