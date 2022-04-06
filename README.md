@@ -49,13 +49,13 @@ Cosine similarity between citation context and cited sentences by:
 
 + [RoBERTa](/experiments/data/context_and_score_roberta.json)
 
-+ [BERT: pretrained with 20 cited papers](/experiments/data/context_and_score_bert_pre-trained.json)
++ [BERT: pretrained with 20 cited papers](/experiments/data/context_and_score_bert_pre-trained.json) (pretrained using the`run_mlm.py`script provided by [huggingface](https://github.com/huggingface/transformers/blob/main/examples/pytorch/language-modeling/run_mlm.py))
 
 ### Results
 The preliminary results of the experiments:
 
-.csv: The cosine similarity of citation context and each cited sentences (ranked by cosine similarity).
+*.csv: The cosine similarity of citation context and each cited sentences (ranked by cosine similarity).
 
-.png: The Prec/Rec/F1 based on the binary predicted labels and
+*.png: The Prec/Rec/F1 based on the binary predicted labels and
     our ground truth.
 
