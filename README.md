@@ -63,3 +63,9 @@ The preliminary results of the experiments:
 *.png: The Prec/Rec/F1 based on the binary predicted labels and
     our ground truth.
 
+## Contributors
+* Michael Färber, Karlsruhe Institute of Technology (KIT)
+* Tarek Saier, Karlsruhe Institute of Technology (KIT)
+* Shuzhou Yuan,  Karlsruhe Institute of Technology (KIT)
+* Adam Jatowt, University of Innsbruck
+* Gard Jenset, Springer Nature
