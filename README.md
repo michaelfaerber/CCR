@@ -42,7 +42,7 @@ The code can be found [here](/experiments/calculate_cosine_similarity.ipynb).
 ### Data
 Data used in the experiments:
 
-[Annotation agreement of 20 citation context](/experiments/data/annotations_agreement_20.json)
+[Annotation agreement of citation contexts](/experiments/data/annotations_agreement_20.json)
 
 [Cited papers](/experiments/data/cited_papers_20.json)
 
