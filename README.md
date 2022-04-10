@@ -25,7 +25,7 @@ The UI has the following features.
 
 ## Experiments
 
-We implemented basic experiments based on 20 citation contexts and associated cited papers. 
+We implemented basic experiments based on 200 citation contexts and associated cited papers, leading to around 66,000 annotated sentence pairs. 
 
 Approach: 
 1. Extracting the representation of citation context and all the cited sentences from a pre-trained language model, e.g.: BERT, DistilBERT, RoBERTa. 
